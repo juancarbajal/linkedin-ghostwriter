@@ -43,6 +43,97 @@ flowchart TD
 
 ---
 
+## 🚀 Guía de Instalación y Ejecución en Antigravity
+
+Cualquier usuario que clone o descargue este repositorio puede ejecutar el pipeline de forma nativa en **Antigravity** sin necesidad de configurar servidores externos, bases de datos o dependencias complejas de Python.
+
+---
+
+### 1. Prerrequisitos
+
+* Tener instalado **Google Antigravity** ([Antigravity IDE](https://antigravity.google) o la CLI `agy`).
+* Una cuenta conectada a Antigravity con acceso a modelos Gemini con capacidad de herramientas y generación de imágenes (el subagente nativo `image-generator` viene integrado por defecto en Antigravity).
+
+---
+
+### 2. Clonar y Abrir el Proyecto
+
+Abre tu terminal, clona el repositorio y ábrelo como espacio de trabajo en Antigravity:
+
+```bash
+# 1. Clonar el repositorio
+git clone <URL_DEL_REPOSITORIO>
+
+# 2. Entrar al directorio del proyecto
+cd antigravity
+
+# 3. Abrir el espacio de trabajo en Antigravity
+agy .
+```
+
+> **Alternativa desde la interfaz gráfica:** Abre la aplicación de escritorio de **Antigravity IDE**, ve a `File` > `Open Folder...` y selecciona la carpeta del repositorio clonado.
+
+---
+
+### 3. Cómo Antigravity Carga el Pipeline
+
+Una vez abierto el espacio de trabajo, Antigravity detecta y asocia automáticamente la arquitectura:
+
+* **Descubrimiento de Skills:** La carpeta `.agents/skills/editorial-visuals/` es indexada como un **Workspace Skill** nativo. El agente sabe cómo activarlo y estructurar briefs editoriales suizos en formato 1:1.
+* **Roles de Agentes:** Los prompts y directivas en `agents/` (`scout.md`, `ghostwriter.md`, `auditor.md` y `art_director.md`) son consumidos por el asistente como guías maestras de ejecución.
+* **Generación Visual Nativa:** El skill se apoya directamente en el subagente nativo `image-generator` de Antigravity, por lo que las imágenes se previsualizan y descargan directamente dentro del chat.
+
+---
+
+### 4. Paso a Paso: Ejecución del Pipeline Semanal
+
+Una vez abierto el proyecto en Antigravity, abre el **panel de Chat** y sigue estos pasos:
+
+#### Paso 1: Iniciar la Curaduría
+Escribe en el chat:
+```text
+"Actúa como el orquestador del pipeline editorial para LinkedIn. Lee los agentes en agents/ y ejecuta la Fase 1 con el Scout Tecnológico para los últimos 7 días."
+```
+El agente consultará fuentes de ingeniería de referencia (blogs técnicos de Martin Fowler, Uber, Netflix, Thoughtworks, AWS, etc.) y te entregará una **Shortlist de 8 a 10 temas** clasificados por pilares.
+
+#### Paso 2: Checkpoint Humano (Selección en 30 segundos)
+Revisa la propuesta y responde en el chat con los números de los 5 temas que quieres publicar:
+```text
+"Selecciono los temas 1, 3, 5, 7 y 8. Continúa con la redacción y auditoría."
+```
+
+#### Paso 3: Generación Autónoma (Ghostwriter + Auditor + Art Director)
+El agente encadenará automáticamente:
+1. **Redacción:** `cto_ghostwriter` crea los 5 análisis técnicos y posts de LinkedIn (250-500 palabras).
+2. **Auditoría:** `editorial_auditor` aplica el checklist de tolerancia cero (elimina clichés, verifica límites y tono CTO).
+3. **Dirección de Arte:** `editorial_art_director` activa el skill `editorial-visuals`, genera el brief técnico de cada post e invoca al subagente `image-generator` para crear las imágenes 1:1 en `visuals/`.
+
+#### Paso 4: Entrega y Publicación
+Al concluir, el agente actualizará el archivo [weekly_editorial_plan.md](weekly_editorial_plan.md):
+* Encontrarás los 5 posts completos listos para copiar y pegar en LinkedIn.
+* Cada post incluye el enlace directo a su imagen generada (`visuals/postX_*.jpg`) que puedes visualizar directamente en el chat de Antigravity.
+
+---
+
+### 💡 Comandos Rápidos Modulares
+
+Si no deseas correr todo el flujo de inicio a fin, puedes invocar tareas individuales:
+
+* **Generar solo la imagen para un post existente:**
+  ```text
+  "Genera la imagen para el post 2 de weekly_editorial_plan.md usando el skill editorial-visuals"
+  ```
+* **Reauditar un post tras hacerle cambios manuales:**
+  ```text
+  "Audita el post 1 con el editorial_auditor para verificar límites de palabras y clichés"
+  ```
+* **Regenerar el plan semanal para una nueva fecha:**
+  ```text
+  "Inicia un nuevo plan editorial semanal para la semana del [Fecha]"
+  ```
+
+---
+
 ## 📁 Estructura del Proyecto
 
 ```text
