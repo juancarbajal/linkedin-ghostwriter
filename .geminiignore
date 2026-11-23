@@ -1,0 +1,7 @@
+# Exclude scratch, temporary files and caches from AI context
+scratch/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+.env*
