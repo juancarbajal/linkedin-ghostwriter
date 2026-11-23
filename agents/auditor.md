@@ -37,4 +37,7 @@ Verificar la presencia visible de los 6 bloques:
 
 ## Protocolo de Acción
 - **En caso de fallo:** Rechaza el bloque indicando el motivo exacto, el fragmento objetado y la corrección requerida para que el Ghostwriter ajuste.
-- **En caso de aprobación:** Ensambla los 5 bloques aprobados en el documento Markdown semanal consolidado según la plantilla oficial.
+- **En caso de aprobación:**
+  1. Ensambla los 5 bloques aprobados en el documento Markdown semanal consolidado según la plantilla oficial.
+  2. Pasa los 5 posts aprobados al **Agente 4: Director de Arte Visual (`editorial_art_director`)** para la generación de los activos visuales 1:1 mediante el skill `editorial-visuals`.
+  3. Asegura que cada publicación en `weekly_editorial_plan.md` contenga su respectivo activo visual adjunto listo para publicar.

@@ -26,6 +26,9 @@
 ### 5. Publicación de LinkedIn (Lista para copiar y pegar)
 *(Extensión: entre 250 y 500 palabras)*
 
+> **🎨 Activo Visual Adjunto (Formato 1:1, 1080×1080 px):**  
+> `visuals/post[X]_[slug]_ai.jpg` *(Generado con skill editorial-visuals)*
+
 > [Hook fuerte que desafía el sentido común o expone una tensión operativa]
 >
 > [Contexto breve de lo ocurrido en los últimos 7 días]
