@@ -23,15 +23,17 @@
 * **Interpretación del mercado:** [Lo que la mayoría asume superficialmente...]
 * **Interpretación estratégica:** [La lectura crítica, profunda y basada en trade-offs...]
 
-### 5. Publicación de LinkedIn (Lista para copiar y pegar)
-*(Extensión: entre 250 y 500 palabras)*
+### 5. Publicación de LinkedIn Optimizada (Lista para copiar y pegar)
+*(Extensión: entre 250 y 500 palabras | Optimizado con skill `linkedin-strategist`)*
+
+* **Diagnóstico de Hook (`[X/10]`):** [Justificación breve de 1 línea y ajustes clave aplicados]
 
 > **🎨 Activo Visual Adjunto (Formato 1:1, 1080×1080 px):**  
 > `visuals/post[X]_[slug]_ai.jpg` *(Generado con skill editorial-visuals)*
 
-> [Hook fuerte que desafía el sentido común o expone una tensión operativa]
+> [Hook fuerte de máximo 140-180 caracteres visibles antes del corte de "ver más" en móvil]
 >
-> [Contexto breve de lo ocurrido en los últimos 7 días]
+> [Contexto breve en párrafos escaneables de 1 a 3 líneas]
 >
 > [Análisis estratégico: trade-offs técnicos, costes, arquitectura, impacto en el SDLC]
 >
@@ -39,7 +41,17 @@
 >
 > [Reflexión final: La tecnología por sí sola no genera resultados; la ventaja competitiva está en la ejecución y la capacidad organizacional]
 >
-> [Pregunta abierta dirigida a pares de la industria]
+> [CTA conversacional: pregunta específica de fricción baja dirigida a pares]
+>
+> `#HashtagAmplio #HashtagNicho1 #HashtagNicho2`
+
+### 6. Estrategia de Publicación y Variantes A/B
+* **Primer Comentario (Link / Recurso / Contexto extra):** [Texto listo para comentar inmediatamente después de publicar, incluyendo aquí la URL de la fuente técnica].
+* **Formato visual recomendado:** [Ej. Esquema de arquitectura, Tarjeta de contraste métrico, etc.]
+* **Perfiles o comunidades a mencionar (Opcional):** [Sugerencia de roles o referentes].
+* **Variantes de Hook (A/B Testing):**
+  * **Opción A (Directa / Dato duro):** [Alternativa de 2 líneas]
+  * **Opción B (Contraintuitiva / Polémica):** [Alternativa de 2 líneas]
 
 ---
 
